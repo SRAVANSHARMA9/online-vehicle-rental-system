@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Rental System - Drive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Drive</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Fleet</a>
+                    <div class="dropdown-content">
+                        <a href="#">Cars</a>
+                        <a href="#">Motorcycles</a>
+                        <a href="#">Pickup Trucks</a>
+                    </div>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="text-content">
+                <h2>Rent a vehicle from our fleet</h2>
+                <p>
+                    Experience the best vehicle rental services with a wide range of cars, motorcycles, and pickup trucks.
+                    Whether you need a vehicle for a day or a month, we have flexible rental plans to suit your needs.
+                    Enjoy hassle-free booking, affordable rates, and excellent customer support.
+                </p>
+            </div>
+            <div class="image-content">
+                <img src="car.jpg" alt="Car">
+            </div>
+        </div>
+        <div class="form-content">
+            <form class="form-row">
+                <div class="form-group">
+                    <label for="pickup-location">Pickup Location</label>
+                    <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter city">
+                </div>
+                <div class="form-group">
+                    <label for="pickup-date">Pickup Date</label>
+                    <input type="date" id="pickup-date" name="pickup-date">
+                </div>
+                <div class="form-group">
+                    <label for="pickup-time">Pickup Time</label>
+                    <input type="time" id="pickup-time" name="pickup-time">
+                </div>
+                <div class="form-group">
+                    <label for="return-date">Return Date</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+                <div class="form-group">
+                    <label for="return-time">Return Time</label>
+                    <input type="time" id="return-time" name="return-time">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
