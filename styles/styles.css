@@ -1,0 +1,522 @@
+/* Reset some basic styles */
+body {
+    font-family: Arial, sans-serif; /* Set font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #000000; /* Black background color */
+}
+
+/* Header styling */
+.main-header {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 1rem 0; /* Padding top and bottom */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+    padding: 10px 50px; /* Padding around header */
+}
+
+/* Logo styling */
+.logo h1 {
+    margin: 0; /* Remove default margin */
+    margin-left: 120%; /* Align the logo towards right */
+    font-size: 30px;
+}
+
+.logo a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.logo a:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: inherit; /* Maintain text color on hover */
+}
+
+/* Dropdown menu styling */
+.main-nav .nav-list {
+    list-style: none; /* Remove default list style */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flexbox layout for horizontal menu */
+}
+
+.main-nav .nav-item {
+    position: relative; /* Position for dropdown */
+    margin-left: 20px; /* Space between menu items */
+}
+
+.main-nav .nav-link {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Padding around links */
+    outline: none;
+}
+
+/* Remove focus outline */
+.main-nav .nav-link:focus {
+    outline: none; /* Remove focus outline */
+    
+}
+
+/* Hover effect for navigation links */
+.main-nav .nav-link:hover,
+.main-nav .dropbtn:hover {
+    background-color: #555; /* Darker background on hover */
+    }
+
+/* Arrow indicator for dropdown */
+.main-nav .dropbtn::after {
+    content: ' ▼'; /* Add arrow */
+    font-size: 0.8rem; /* Smaller size for arrow */
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position absolutely */
+    background-color: #333; /* Dark background color */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 1000; /* Ensure dropdown is above other content */
+    min-width: 160px; /* Minimum width for dropdown */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Add margin-top for spacing */
+}
+
+/* Dropdown links styling */
+.dropdown-content .dropdown-link {
+    color: white; /* White text color */
+    padding: 16px 16px; /* Padding inside dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display for full-width */
+    outline: none; /* Remove focus outline */
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content .dropdown-link:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block; /* Display dropdown content */
+}
+
+/* Ensure dropdown stays open when hovered or focused */
+.main-nav .nav-item:hover .dropdown-content,
+.main-nav .nav-item:focus-within .dropdown-content {
+    display: block; /* Ensure dropdown stays open */
+}
+
+/* Flexbox layout for content sections */
+.main-content .content {
+    display: flex; /* Flexbox layout */
+    justify-content: flex-end; /* Align text content to the right */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below content */
+    background-color: #000000; /* Black background color */
+    padding: 20px; /* Padding inside content */
+    position: relative; /* Relative positioning for overlap */
+    z-index: 1; /* Ensure content is above form-content */
+}
+
+/* Text content styling */
+.main-content .text-content {
+    flex: 1; /* Flex grow */
+    max-width: 80%; /* Limit the width of the text content */
+    padding-right: 20px; /* Padding on the right */
+}
+
+.main-content .text-content h2 {
+    font-size: 2rem; /* Larger font size for heading */
+    margin-bottom: 10px; /* Space below heading */
+    margin-left: 15.3%;
+    color: #0c48df; /* Blue color for heading */
+}
+
+.main-content .text-content p {
+    margin-left: 15.3%;
+    font-size: 1.1rem; /* Normal font size for paragraph */
+    line-height: 2.4; /* Line height for readability */
+    color: #D3D3D3; /* White text color */
+   
+}
+
+/* Default button styling within .text-content */
+.main-content .text-content .view-button {
+    display: inline-block; /* Ensure button dimensions fit the content */
+    margin-left: 15.3%;
+    padding: 12px 24px; /* Padding inside the button */
+    background-color: #D3D3D3; /* White background color */
+    font-weight: bold;
+    color: #4e25df; /* Blue text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size for the button text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for background color and transform */
+}
+
+/* Hover state styling within .text-content */
+.main-content .text-content .view-button:hover {
+    background-color: #0940b0; /* Darker blue background on hover */
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+}
+
+/* Active state styling within .text-content */
+.main-content .text-content .view-button:active {
+    background-color: #073582; /* Even darker blue background on active */
+    transform: translateY(0); /* Reset the button position on active */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); /* Inner shadow on active */
+}
+
+/* Image content styling */
+.main-content .image-content {
+    flex: 1; /* Flex grow */
+    text-align: center; /* Center image horizontally */
+}
+
+.main-content .image-content img {
+    max-width: 100%; /* Image should not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Form container styling */
+.main-content .form-content {
+    width: 80%; /* Reduce width of form-content */
+    margin: -50px auto 0; /* Negative margin to overlap content */
+    background-color: #ffffff; /* White background color */
+    padding: 20px; /* Padding inside form content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    position: relative; /* Relative positioning for overlap */
+    z-index: 2; /* Ensure form-content is above other content */
+}
+
+/* Flexbox layout for form rows */
+.main-content .form-row {
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Wrap form fields on smaller screens */
+    gap: 20px; /* Space between form fields */
+}
+
+/* Form group styling */
+.main-content .form-group {
+    flex: 1; /* Flex grow */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column layout */
+}
+
+.main-content .form-label {
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold text for labels */
+    color: #0c48df; /* Blue color for labels */
+}
+
+.main-content .form-input {
+    padding: 10px; /* Padding inside inputs */
+    font-size: 1rem; /* Normal font size */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.main-content .form-input:focus {
+    border-color: #333; /* Dark border on focus */
+}
+
+/* Submit button styling */
+.main-content .submit-button {
+    padding: 10px 35px; /* Padding inside button */
+    margin-top: 25px;
+    background-color: #eeebeb; /* Light grey background color */
+    font-weight: bolder;
+    color: #4e25df; /* Blue text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    align-self: flex-start; /* Align button to the start */
+}
+
+.main-content .submit-button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+
+/* customer_sign_in Styling */
+
+
+/* Sign-In container styling */
+.signin-container {
+    width: 100%;
+    max-width: 400px; /* Maximum width for the container */
+    height: 400px;
+    background-color: #ffffff; /* White background color */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center-align text */
+    margin: 50px auto; /* Center the container */
+    display: flex; /* Flexbox for vertical alignment */
+    flex-direction: column; /* Column layout */
+    justify-content: space-around; /* Distribute space evenly */
+    
+}
+
+/* Form group styling */
+.signin-container .form-group {
+    width: 100%;
+    margin: 40px auto; /* Center the container */
+    text-align: left; /* Align text to the left */
+}
+
+/* Form input styling */
+.signin-container .form-input {
+    width: 80%; /* Full width input fields */
+    padding: 10px; /* Padding inside inputs */
+    margin: auto;
+    font-size: 1rem; /* Normal font size */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.signin-container .form-input:focus {
+    border-color: #1877f2; /* Blue border on focus */
+    border-width: 2px; /* Increase border width */
+    box-shadow: 0 0 5px rgba(24, 119, 242, 0.5); /* Add a blue shadow effect */
+}
+
+/* Login button styling */
+.signin-container .login-button {
+    width: 70%; /* Full width button */
+    margin: auto;
+    padding: 10px; /* Padding inside button */
+    background-color: #1877f2; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size for the button text */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.signin-container .login-button:hover {
+    background-color: #165db5; /* Darker blue background on hover */
+}
+
+/* Forgot password link styling */
+.signin-container .forgot-password {
+    color: #1877f2; /* Blue text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Slightly smaller font size */
+    text-align: center;
+}
+
+.signin-container .forgot-password:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Horizontal rule styling */
+.signin-container hr {
+    border: none; /* Remove default border */
+    border-top: 1px solid #ddd; /* Light grey top border */
+    margin: 20px 0px; /* Space above and below */
+}
+
+
+.create-account-button {
+    display: inline-block; /* Ensure button dimensions fit the content */
+    padding: 10px 20px; /* Padding inside button */
+    background-color: #42b72a; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size for the button text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth transitions for background color */
+    width: 60%; /* Same width as the original button */
+    margin: auto; /* Center the button */
+}
+
+.create-account-button:hover {
+    background-color: #36a420; /* Darker blue on hover */
+}
+
+
+
+/* User registration page */
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    height: 100vh;
+    margin-top: 50px; /* Margin from the header */
+}
+
+#registrationForm {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 4px solid #007bff; /* Add a blue border */
+    box-shadow: 0 0 15px rgba(235, 10, 10, 0.5); /* Increased blur and opacity for visibility */
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registrationForm .input-group {
+    width: 72%;
+    margin-bottom: 30px;
+}
+
+#registrationForm label {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+#registrationForm input[type="text"],
+#registrationForm input[type="email"],
+#registrationForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: large;
+}
+
+#registrationForm .password-container {
+    position: relative;
+    width: 100%;
+}
+
+#registrationForm .show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #007bff;
+    font-size: 14px;
+}
+
+#registrationForm .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#registrationForm button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin: auto;
+    padding: 10px 20px;
+    width: 60%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#registrationForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Create Your Account text styling */
+.text-content_register h2 {
+    font-size: 1.8rem; /* Larger font size for heading */
+    margin-left: 19%;
+    color: #ffffff; /* White color for the heading text */
+}
+
+
+.car-rental .container {
+    display: flex;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-rental .card {
+    background-color: #D3D3D3;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 400px; /* Adjust width for three cards per row */
+    text-align: center;
+    font-weight: bold;
+    height: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-rental .card img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border: 4px solid #000000; /* Add a blue border */
+}
+
+.car-rental .card h3 {
+    color: #1f0f67;
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.car-rental .card p {
+    color: #15199b;
+    margin: 16px 0;
+}
+
+.car-rental .card .price {
+    font-size: 18px;
+    color: #090985;
+    margin: 10px 0;
+}
+
+.car-rental .details {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    color: #420e7e;
+}
+
+.car-rental .details div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.car-rental .details i {
+    color: #390d80;
+}
+
+.car-rental .button {
+    background-color: #111795;
+    color: white;
+    width: 50%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 0px;
+    display: inline-block;
+}
